@@ -46,11 +46,11 @@ function popupInputMarker(evt) {
     overlay.setPosition(tile);
 }
 
-function popupGetMarker(evt,features) {
-    let title = features.get('name');
+function popupGetMarker(evt,feature) {
+    let title = feature.get('id')+"#"+feature.get('name');
     setInner('popupinfo-title',title);
-    setValue('idmarker',features.get('id'));
-    let ctnt = "type : "+features.getGeometry().getType()+"<br>XY : "+toLonLat(evt.coordinate);
+    setValue('idmarker',feature.get('id'));
+    let ctnt = "volume : "+feature.get('volume')+"<br>XY : "+feature.get('geometry').flatCoordinates;
     setInner('popupinfo-content',ctnt);
     popupinfo.setPosition(evt.coordinate);
 }
