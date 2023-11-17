@@ -9,8 +9,7 @@ import {container} from 'https://jscroot.github.io/element/croot.js';
 
 const attributions = '<a href="https://petapedia.github.io/" target="_blank">&copy; PetaPedia Indonesia</a> ';
 
-const place = [107.69200630757098,
-  -6.908971696915415];
+const place = [103.81128613262871,1.3247366000091603];
 
 export let idmarker = {id:1};
 
@@ -51,4 +50,3 @@ export let map = new Map({
   target: 'map',
   view: defaultstartmap,
 });
-
